@@ -1,0 +1,4 @@
+Unit testing was carried out on individual modules of the system to ensure that they are fullyfunctional units. 
+This was done by examining each unit. It was checked to ensure that it functions as required and 
+that it adds student’s data and other details and also ensured that this data is stored in thedatabase. 
+The success of each individual unit gave led a go ahead to carryout integration testing. Allidentified errors were dealt with.

@@ -11,33 +11,14 @@
 #ifndef STUDENT_H 
 #define STUDENT_H
 void insert(int rollnumber, char* name, char* phone, float percentage);
-/**
- * @brief 
- * 
- * insert function declaration
- */
+/*insert function declaration*/
 void search(int rollnumber);
-/**
- * @brief search function declaration
- * 
- */
+/*search function declaration*/
 void update(int rollnumber);
-/**
- * @brief update function declaration
- *  
- */
+/*update function declaration*/
 void Delete(int rollnumber);
-/**
- * @brief delete function declaration
- * 
- */
+/*delete function declaration*/
 void display();
-/**
- * @brief display function declaration
- * 
- */
+/* display function declaration*/
 #endif 
-/**
- * @brief ending #endif
- * 
- */
+/*ending #endif*/

@@ -27,12 +27,9 @@ int main()
     { 
         printf("\nEnter Choice: ");
         scanf("%d", &choice);
-        switch (choice)
+        switch (choice) /*enter your choise for the reqired task */
         {
-            /**
-             * @brief enter your choise for the reqired task
-             * 
-             */
+            
             case 1:
                 printf("Enter roll number: ");
                 scanf("%d", &rollnumber);
@@ -68,5 +65,5 @@ int main()
                 break;
         }
         
-    } while (choice != 0);
+    } while (choice != 0); /*when choise is not equal to zero*/
 }
