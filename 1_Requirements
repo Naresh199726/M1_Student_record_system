@@ -11,6 +11,7 @@ HIGH LEVEL REQUIREMENTS
 3. The Application should allow user to list all the students records.
 4. The Application should allow user to update the students records.
 5. The Application should allow user to delete students records.
+6. The Application should allow user to exit.
 
 
 LOW LEVEL REQUIREMENTS
@@ -21,6 +22,7 @@ Choices:
 3. update Record		
 4. Delete Record		
 5. Display all the students
+6. Exit.
 
 a. The application will ask user to enter info such as Enter name, Enter Id, Enter %Age.
 b. The application will show all details of Student.
