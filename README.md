@@ -39,7 +39,9 @@ How:
 
 # FOLDER STRUCTURE
 
-FOLDER	                 DESCRPTION
+FOLDER	 :    DESCRPTION
+
+
 1_Requirements  	:     Documents detailing requirements
 2_Architecture  	 :    Structural and Behavioural UML
 3_Implementation	  :   All the code is written here
