@@ -115,7 +115,7 @@ void Delete(int rollnumber)
                  * temp2 is the node previous to temp1*/
                 temp2->next = temp1->next;
                 free(temp1); 
-            }
+            } 
             
             printf("Record Successfully Deleted !!!\n");
             return;
