@@ -9,7 +9,7 @@
 
 [![CI](https://github.com/Naresh199726/M1_Student_record_system/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/Naresh199726/M1_Student_record_system/actions/workflows/main.yml)
 
-[![MSBuild](https://github.com/Naresh199726/M1_Student_record_system/actions/workflows/msbuild.yml/badge.svg)](https://github.com/Naresh199726/M1_Student_record_system/actions/workflows/msbuild.yml)
+
 
 Title: Students Information Management System
 
