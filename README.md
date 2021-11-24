@@ -1,9 +1,9 @@
 
 # M1_Student Records System
 
-[![Coad_Grade](https://api.codiga.io/project/29912/status/svg)
+![Coad_Grade](https://api.codiga.io/project/29912/status/svg)
 
-[![Coad_Quality_Score](https://api.codiga.io/project/29912/score/svg)
+![Coad_Quality_Score](https://api.codiga.io/project/29912/score/svg)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/75b7c4b5dfa14b148f710c262c79498e)](https://app.codacy.com/gh/Naresh199726/M1_Student_record_system?utm_source=github.com&utm_medium=referral&utm_content=Naresh199726/M1_Student_record_system&utm_campaign=Badge_Grade_Settings)
 
