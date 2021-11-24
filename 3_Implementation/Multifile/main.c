@@ -2,6 +2,7 @@
  * @file main.c
  * @author your name (you@domain.com)
  * @brief included header files
+ * @code .c
  * @version 0.1
  * @date 2021-11-23
  * 

@@ -1,3 +1,6 @@
+#[![Codacy Badge](https://app.codacy.com/project/badge/Grade/768e84793c8740a78f6fdb721a2c236c)](https://www.codacy.com/gh/Naresh199726/M1_Student_record_system/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Naresh199726/M1_Student_record_system&amp;utm_campaign=Badge_Grade)
+
+
 # M1_Student Records System
 
 Title: Students Information Management System
