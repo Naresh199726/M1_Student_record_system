@@ -1,5 +1,7 @@
 # M1_Student Records System
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/75b7c4b5dfa14b148f710c262c79498e)](https://app.codacy.com/gh/Naresh199726/M1_Student_record_system?utm_source=github.com&utm_medium=referral&utm_content=Naresh199726/M1_Student_record_system&utm_campaign=Badge_Grade_Settings)
+
 Title: Students Information Management System
 
 The mini-project “Studen Record System Project in C” is a console application using the C programming language. This project compiled in VS Code with the GCC compiler. In this console application, you can do basic Student Record tasks like adding the student info, view the added student, search the student. This application based on file handling in C, where I have used a multifile function, Also to increase the readability, I have broken the application in different functions. Each function of the project extensively use in the file handing function, so it is also a great project to understand file handling in C.
