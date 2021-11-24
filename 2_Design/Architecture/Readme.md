@@ -6,4 +6,5 @@
 
 #Structural Digram
 
-![]file:///C:/Users/Naresh/Desktop/uml/umld.svg
+![Capture1](https://user-images.githubusercontent.com/62556829/143272871-2d155ab2-ac98-4737-bd1a-d4a8a8f2acc6.JPG)
+
