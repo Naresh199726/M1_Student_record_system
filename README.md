@@ -50,15 +50,10 @@ How:
 
 # FOLDER STRUCTURE
 
-FOLDER	 :    DESCRPTION
-
-
-1_Requirements  	:     Documents detailing requirements
-
-2_Architecture  	 :    Structural and Behavioural UML
-
-3_Implementation	  :   All the code is written here
-
-4_TestPlanAndOutput 	: Documents with test plans and outputs
-
-5_Report	           :  Generated Report
+|FOLDER	             |  DESCRPTION                            |
+|------------------- |--------------------------------------  |
+|1_Requirements  	   | Documents detailing requirements       |     
+|2_Architecture  	   | Structural and Behavioural UML         |
+|3_Implementation	   |  All the code is written here          |
+|4_TestPlanAndOutput |	 Documents with test plans and outputs |
+|5_Report	           |  Generated Report                      |
