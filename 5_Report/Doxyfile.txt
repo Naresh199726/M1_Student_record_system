@@ -1,0 +1,289 @@
+/**
+ * @file main.c
+ * @author your name (you@domain.com)
+ * @brief included header files
+ * @code .c
+ * @version 0.1
+ * @date 2021-11-23
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+#include<stdlib.h>
+#include<string.h>
+#include<stdio.h>
+#include "student.h"
+#include "student.c"
+/**
+ * @brief created int main function
+ * 
+ * @return int 
+ */
+int main()
+{
+    head = NULL;
+    int choice; ///enter choise
+    char name[100];///name of a student
+    char phone[100];///enter phone number 
+    int rollnumber;///enter student roll number
+    float percentage;///enter student persentage
+    printf("1 to insert student details\n2 to search for student details\n3 to delete student details\n4 to update student details\n5 to display all student details\n6 exit");
+    do
+    { 
+        printf("\nEnter Choice: ");
+        scanf("%d", &choice);
+        switch (choice) ///enter your choise for the reqired task 
+        {
+            
+            case 1:
+                printf("Enter roll number: ");
+                scanf("%d", &rollnumber);
+                printf("Enter name: ");
+                scanf("%s", name);
+                printf("Enter phone number: ");
+                scanf("%s", phone);
+                printf("Enter percentage: ");
+                scanf("%f", &percentage);
+                insert(rollnumber, name, phone, percentage);
+                break;
+            case 2:
+                printf("Enter roll number to search: ");
+                scanf("%d", &rollnumber);
+                search(rollnumber);
+                break;
+            case 3:
+                printf("Enter roll number to delete: ");
+                scanf("%d", &rollnumber);
+                Delete(rollnumber);
+                break;
+            case 4:
+                printf("Enter roll number to update: ");
+                scanf("%d", &rollnumber);
+                update(rollnumber);
+                break;
+            case 5:
+                display();
+                break;
+            case 6:
+                printf("exit");
+                exit(0);
+                break;
+        }
+        
+    } while (choice != 0); /*when choise is not equal to zero*/
+}
+
+
+/**
+ * @file student.c
+ * @author naresh (you@domain.com)
+ * @brief included header files
+ * @version 0.1
+ * @date 2021-11-23
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+#include "student.h"
+#include<stdlib.h>
+#include<string.h>
+#include<stdio.h>
+/**
+ * @brief 
+ * 
+ */
+struct Student
+{
+    int rollnumber; 
+    char name[100];
+    char phone[100];
+    float percentage;
+    struct Student *next;
+    
+    
+}* head;
+/**
+ * @brief 
+ * 
+ * @param rollnumber 
+ * @param name 
+ * @param phone 
+ * @param percentage 
+ */
+
+void insert(int rollnumber, char* name, char* phone, float percentage)///function to insert students
+{   
+    struct Student * student = (struct Student *) malloc(sizeof(struct Student));///instalising memory using malloc function
+    student->rollnumber = rollnumber;
+    strcpy(student->name, name);///strcpy copies name of a student to user name variable
+    
+    strcpy(student->phone, phone);///strcpy copies phone of a student to user phone variable
+    student->percentage = percentage;
+    student->next = NULL;
+    /**one object of student is created. 
+     * Create new if needed.
+     * 
+     */
+    if(head==NULL){
+        /**if head is NULL
+        set student as the new head*/
+        head = student;
+    }
+    else{
+        ///if list is not empty insert student in beginning of head
+        student->next = head;
+        head = student;///assigning student to head variabel
+    }
+    
+}
+/**
+ * @brief 
+ * 
+ * @param rollnumber 
+ */
+void search(int rollnumber)///function to search student
+{
+    struct Student * temp = head;
+    while(temp!=NULL){
+        if(temp->rollnumber==rollnumber){
+            printf("Roll Number: %d\n", temp->rollnumber);
+            printf("Name: %s\n", temp->name);
+            printf("Phone: %s\n", temp->phone);
+            printf("Percentage: %0.4f\n", temp->percentage);
+            return;
+        }
+        temp = temp->next;
+    }
+    printf("Student with roll number %d is not found !!!\n", rollnumber);
+}
+/**
+ * @brief 
+ * 
+ * @param rollnumber 
+ */
+void update(int rollnumber)///function to update student
+{
+    
+    struct Student * temp = head;///while temp not equal to null
+    while(temp!=NULL){///if temp rollnumber==rollnumber
+        if(temp->rollnumber==rollnumber){
+            printf("Record with roll number %d Found !!!\n", rollnumber);
+            printf("Enter new name: ");
+            scanf("%s", temp->name);
+            printf("Enter new phone number: ");
+            scanf("%s", temp->phone);
+            printf("Enter new percentage: ");
+            scanf("%f",&temp->percentage);
+            printf("Updation Successful!!!\n");
+            return;
+        }
+        temp = temp->next;
+        
+    }
+    printf("Student with roll number %d is not found !!!\n", rollnumber);
+    
+}
+/**
+ * @brief 
+ * 
+ * @param rollnumber 
+ */
+void Delete(int rollnumber)///function to delete student
+{
+    struct Student * temp1 = head;
+    struct Student * temp2 = head; 
+    while(temp1!=NULL){
+        
+        if(temp1->rollnumber==rollnumber){
+            
+            printf("Record with roll number %d Found !!!\n", rollnumber);
+            
+            if(temp1==temp2){
+                /**this condition will run if
+                 *the record that we need to delete is the first node
+                 *of the linked list
+                 */
+                head = head->next;
+                free(temp1);
+            }
+            else{
+                /** temp1 is the node we need to delete
+                 * temp2 is the node previous to temp1*/
+                temp2->next = temp1->next;
+                free(temp1); 
+            } 
+            
+            printf("Record Successfully Deleted !!!\n");
+            return;
+            
+        }
+        temp2 = temp1;
+        temp1 = temp1->next;
+        
+    }
+    printf("Student with roll number %d is not found !!!\n", rollnumber);
+    
+}
+/**
+ * @brief 
+ * 
+ */
+void display()///function to display students
+{
+    struct Student * temp = head;
+    while(temp!=NULL){
+        
+        printf("Roll Number: %d\n", temp->rollnumber);
+        printf("Name: %s\n", temp->name);
+        printf("Phone: %s\n", temp->phone);
+        printf("Percentage: %0.4f\n\n", temp->percentage);
+        temp = temp->next;
+        
+    }
+}
+
+/**
+ * @file student.h
+ * @author your name (you@domain.com)
+ * @brief declration of all the functions
+ * @version 0.1
+ * @date 2021-11-23
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+#ifndef STUDENT_H 
+#define STUDENT_H
+/**
+ * @brief 
+ * 
+ * @param rollnumber 
+ * @param name 
+ * @param phone 
+ * @param percentage 
+ */
+void insert(int rollnumber, char* name, char* phone, float percentage);///insert function declaration
+/**
+ * @brief add student into the data base
+ * 
+ * @param rollnumber 
+ */
+void search(int rollnumber);///search function declaration
+/**
+ * @brief serche for the student
+ * 
+ * @param rollnumber 
+ */
+void update(int rollnumber);///update function declaration*/
+/**
+ * @brief upadte student detiles
+ * 
+ * @param rollnumber 
+ */
+void Delete(int rollnumber);///delete function declaration
+/**
+ * @brief displaying the student infremation
+ * 
+ */
+void display();/// display function declaration
+#endif ///ending #endif
