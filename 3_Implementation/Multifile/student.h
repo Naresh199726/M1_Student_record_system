@@ -10,15 +10,36 @@
  */
 #ifndef STUDENT_H 
 #define STUDENT_H
-void insert(int rollnumber, char* name, char* phone, float percentage);
-/*insert function declaration*/
-void search(int rollnumber);
-/*search function declaration*/
-void update(int rollnumber);
-/*update function declaration*/
-void Delete(int rollnumber);
-/*delete function declaration*/
-void display();
-/* display function declaration*/
-#endif 
-/*ending #endif*/
+/**
+ * @brief 
+ * 
+ * @param rollnumber 
+ * @param name 
+ * @param phone 
+ * @param percentage 
+ */
+void insert(int rollnumber, char* name, char* phone, float percentage);///insert function declaration
+/**
+ * @brief add student into the data base
+ * 
+ * @param rollnumber 
+ */
+void search(int rollnumber);///search function declaration
+/**
+ * @brief serche for the student
+ * 
+ * @param rollnumber 
+ */
+void update(int rollnumber);///update function declaration*/
+/**
+ * @brief upadte student detiles
+ * 
+ * @param rollnumber 
+ */
+void Delete(int rollnumber);///delete function declaration
+/**
+ * @brief displaying the student infremation
+ * 
+ */
+void display();/// display function declaration
+#endif ///ending #endif

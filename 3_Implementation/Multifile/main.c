@@ -14,21 +14,25 @@
 #include<stdio.h>
 #include "student.h"
 #include "student.c"
-
+/**
+ * @brief created int main function
+ * 
+ * @return int 
+ */
 int main()
 {
     head = NULL;
-    int choice;
-    char name[100];
-    char phone[100];
-    int rollnumber;
-    float percentage;
+    int choice; ///enter choise
+    char name[100];///name of a student
+    char phone[100];///enter phone number 
+    int rollnumber;///enter student roll number
+    float percentage;///enter student persentage
     printf("1 to insert student details\n2 to search for student details\n3 to delete student details\n4 to update student details\n5 to display all student details\n6 exit");
     do
     { 
         printf("\nEnter Choice: ");
         scanf("%d", &choice);
-        switch (choice) /*enter your choise for the reqired task */
+        switch (choice) ///enter your choise for the reqired task 
         {
             
             case 1:
