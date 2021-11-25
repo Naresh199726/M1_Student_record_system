@@ -11,7 +11,7 @@
 
 
 
-Title: Students Information Management System
+#Title: Students Information Management System
 
 The mini-project “Studen Record System Project in C” is a console application using the C programming language. This project compiled in VS Code with the GCC compiler. In this console application, you can do basic Student Record tasks like adding the student info, view the added student, search the student. This application based on file handling in C, where I have used a multifile function, Also to increase the readability, I have broken the application in different functions. Each function of the project extensively use in the file handing function, so it is also a great project to understand file handling in C.
 
